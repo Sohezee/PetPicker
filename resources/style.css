@@ -337,15 +337,34 @@ header span {
     width: 28px;
     height: 16px;
     border-radius: 2px;
-    background: #4AC91D;
     box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
     margin: 0 2px;
-
-
 }
 
 .rectangle-container {
     display: flex;
+}
+
+.red .rectangle1 {
+    background: #d14949;
+}
+
+.red .rectangle2, .red .rectangle3 {
+    background: #D9D9D9;
+    box-shadow: none;
+}
+
+.yellow .rectangle1, .yellow .rectangle2 {
+    background: #F5E050;
+}
+
+.yellow .rectangle3 {
+    background: #D9D9D9;
+    box-shadow: none;
+}
+
+.green div {
+    background: #4AC91D;
 }
 
 .maintenance-container,
