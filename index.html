@@ -7,6 +7,8 @@
     <title>Pet Picker</title>
 
     <link href="resources/style.css" rel="stylesheet">
+    <script src="resources/script.js" defer></script>
+
     <link rel="icon" type="image/png" href="resources/images/PetPickerLogo.png">
 </head>
 
@@ -38,31 +40,37 @@
             <h1>Metrics</h1>
             <hr>
             <div class="slider-section">
+
                 <h2>Maintenance</h2>
-                <input type="range" min="0" max="3" step="1" value="2">
+                <input type="range" id="maintenance-slider" min="1" max="3" step="1" value="2">
                 <a href="#" title="Care level needed: cleaning, grooming, exercising"><img
                         src="resources/images/help.svg"></a>
+                <div class="slider-value" id="maintenance-value">2</div>
             </div>
             <div class="slider-section">
                 <h2>Social Level</h2>
-                <input type="range" min="0" max="3" step="1" value="2">
+                <input type="range" id="social-level-slider" min="1" max="3" step="1" value="2">
+
                 <a href="#" title="Interaction frequency: walks, training, play"><img
                         src="resources/images/help.svg"></a>
+                <div class="slider-value" id="social-level-value">2</div>
             </div>
             <div class="slider-section">
                 <h2>Life Span</h2>
-                <input type="range" min="0" max="50" step="1" value="25">
-                <a href="#" title="Average lifetime of the pet"><img src="resources/images/help.svg"></a>
+                <input type="range" id="life-span-slider" min="1" max="50" step="1" value="10">
+                <a href="#" title="Average lifetime of pet in years"><img src="resources/images/help.svg"></a>
+                <div class="slider-value" id="life-span-value">10</div>
             </div>
             <div class="slider-section">
                 <h2>Price</h2>
                 <span>&#40;Per Month&#41;</span>
-                <input type="range" min="0" max="1000" step="1" value="500">
+                <input type="range" id="price-slider" min="0" max="600" step="1" value="60">
                 <a href="#" title="Estimated monthly costs: food, vet, etc."><img src="resources/images/help.svg"></a>
+                <div class="slider-value" id="price-value">$60</div>
             </div>
             <div>
                 <h2>Vegan Diet Compatible</h2>
-                <input type="checkbox">
+                <input type="checkbox" id="vegan-checkbox">
                 <a href="#" title="Indicates if a pet is suitable for a vegan diet"><img
                         src="resources/images/help.svg"></a>
             </div>
@@ -71,40 +79,40 @@
             <div class="option-container">
                 <div class="option">
                     <h3>Dogs</h3>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="dogs-checkbox" checked>
                 </div>
                 <div class="option">
                     <h3>Amphibians</h3>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="amphibians-checkbox" checked>
                 </div>
                 <div class="option">
                     <h3>Cats</h3>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="cats-checkbox" checked>
                 </div>
                 <div class="option">
                     <h3>Rabbits</h3>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="rabbits-checkbox" checked>
                 </div>
                 <div class="option">
                     <h3>Birds</h3>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="birds-checkbox" checked>
                 </div>
                 <div class="option">
                     <h3>Rodents</h3>
-                    <input type="checkbox" class="checkbox" checked>
+                    <input type="checkbox" id="rodents-checkbox" checked>
                 </div>
                 <div class="option">
                     <h3>Fish</h3>
-                    <input type="checkbox" class="checkbox" checked>
+                    <input type="checkbox" id="fish-checkbox" checked>
                 </div>
                 <div class="option">
                     <h3>Reptiles</h3>
-                    <input type="checkbox" class="checkbox" checked>
+                    <input type="checkbox" id="reptiles-checkbox" checked>
                 </div>
             </div>
         </div>
         <div class="pet-section">
-            <div class="pet">
+            <div class="pet" id="labradorRetriever">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg">
                 <h3>Labrador Retriever</h3>
                 <hr>
@@ -129,7 +137,7 @@
                     <a href="#">See More</a>
                 </div>
             </div>
-            <div class="pet">
+            <div class="pet" id="goldfish">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/%E3%83%AF%E3%82%AD%E3%83%B320120701.JPG">
                 <h3>Goldfish</h3>
                 <hr>
@@ -154,7 +162,7 @@
                     <a href="#">See More</a>
                 </div>
             </div>
-            <div class="pet">
+            <div class="pet" id="siameseCat">
                 <img src="https://blog.iconicpaw.com/wp-content/uploads/2023/03/siamese-cat-with-blue-eyes.jpg">
                 <h3>Siamese Cat</h3>
                 <hr>
@@ -179,7 +187,7 @@
                     <a href="#">See More</a>
                 </div>
             </div>
-            <div class="pet">
+            <div class="pet" id="bettaFish">
                 <img src="https://c1.wallpaperflare.com/preview/92/156/846/betta-warrior-aquarium-fish-fishy-asian.jpg">
                 <h3>Betta Fish</h3>
                 <hr>
@@ -210,7 +218,7 @@
     <footer>
         <h2>Soham Vij</h2>
         <h2 class="pet-picker"> &#X2022 PetPicker</h2>
-        
+
     </footer>
 </body>
 

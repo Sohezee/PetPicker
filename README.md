@@ -2,8 +2,8 @@
 
 WIP Website for finding pets compatible with your preferences
 - [x] Write main page HTML and CSS
+- [x] Add JavaScript for the main page
 - [ ] Add all animals with accurate info
-- [ ] Add JavaScript for the main page
 - [ ] Add about page
 - [ ] Make pages for animals
 
