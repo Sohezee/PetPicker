@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Picker</title>
 
-    <link href="resources/style.css" rel="stylesheet">
+    <link href="resources/css/style.css" rel="stylesheet">
+    <link href="resources/css/common.css" rel="stylesheet">
     <script src="resources/script.js" defer></script>
 
     <link rel="icon" type="image/png" href="resources/images/PetPickerLogo.png">
@@ -22,8 +23,8 @@
             </div>
         </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
             <div class="dropdown">
                 <button class="dropbtn">Animals</button>
                 <div class="dropdown-content">
@@ -43,7 +44,7 @@
 
                 <h2>Maintenance</h2>
                 <input type="range" id="maintenance-slider" min="1" max="3" step="1" value="2">
-                <a href="#" title="Care level needed: cleaning, grooming, exercising"><img
+                <a href="#" class="tooltip" title="Care level needed: cleaning, grooming, exercising"><img
                         src="resources/images/help.svg"></a>
                 <div class="slider-value" id="maintenance-value">2</div>
             </div>
@@ -51,27 +52,27 @@
                 <h2>Social Level</h2>
                 <input type="range" id="social-level-slider" min="1" max="3" step="1" value="2">
 
-                <a href="#" title="Interaction frequency: walks, training, play"><img
+                <a href="#" class="tooltip" title="Interaction frequency: walks, training, play"><img
                         src="resources/images/help.svg"></a>
                 <div class="slider-value" id="social-level-value">2</div>
             </div>
             <div class="slider-section">
                 <h2>Life Span</h2>
                 <input type="range" id="life-span-slider" min="1" max="50" step="1" value="10">
-                <a href="#" title="Average lifetime of pet in years"><img src="resources/images/help.svg"></a>
+                <a href="#" class="tooltip" title="Average lifetime of pet in years"><img src="resources/images/help.svg"></a>
                 <div class="slider-value" id="life-span-value">10</div>
             </div>
             <div class="slider-section">
                 <h2>Price</h2>
                 <span>&#40;Per Month&#41;</span>
-                <input type="range" id="price-slider" min="0" max="600" step="1" value="60">
-                <a href="#" title="Estimated monthly costs: food, vet, etc."><img src="resources/images/help.svg"></a>
-                <div class="slider-value" id="price-value">$60</div>
+                <input type="range" id="price-slider" min="0" max="600" step="1" value="90">
+                <a href="#" class="tooltip" title="Estimated monthly costs: food, vet, etc. (excludes initial setup price)"><img src="resources/images/help.svg"></a>
+                <div class="slider-value" id="price-value">$90</div>
             </div>
             <div>
                 <h2>Vegan Diet Compatible</h2>
                 <input type="checkbox" id="vegan-checkbox">
-                <a href="#" title="Indicates if a pet is suitable for a vegan diet"><img
+                <a href="#" class="tooltip" title="Indicates if a pet is suitable for a vegan diet"><img
                         src="resources/images/help.svg"></a>
             </div>
             <h1 class="categories">Categories</h1>
@@ -111,9 +112,10 @@
                 </div>
             </div>
         </div>
+        
         <div class="pet-section">
             <div class="pet" id="labradorRetriever">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg">
+                <img src="resources/images/animals/labradorRetriever.jpg">
                 <h3>Labrador Retriever</h3>
                 <hr>
                 <div class="info-container">
@@ -138,7 +140,7 @@
                 </div>
             </div>
             <div class="pet" id="goldfish">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/%E3%83%AF%E3%82%AD%E3%83%B320120701.JPG">
+                <img src="resources/images/animals/goldfish.JPG">
                 <h3>Goldfish</h3>
                 <hr>
                 <div class="info-container">
@@ -163,7 +165,7 @@
                 </div>
             </div>
             <div class="pet" id="siameseCat">
-                <img src="https://blog.iconicpaw.com/wp-content/uploads/2023/03/siamese-cat-with-blue-eyes.jpg">
+                <img src="resources/images/animals/siameseCat.jpg">
                 <h3>Siamese Cat</h3>
                 <hr>
                 <div class="info-container">
@@ -188,7 +190,7 @@
                 </div>
             </div>
             <div class="pet" id="bettaFish">
-                <img src="https://c1.wallpaperflare.com/preview/92/156/846/betta-warrior-aquarium-fish-fishy-asian.jpg">
+                <img src="resources/images/animals/bettaFish.jpg">
                 <h3>Betta Fish</h3>
                 <hr>
                 <div class="info-container">
@@ -202,13 +204,113 @@
                     </div>
                     <div class="social-level-container">
                         <span>Social Level: </span>
-                        <div class="rectangle-container green">
+                        <div class="rectangle-container yellow">
                             <div class="rectangle1"></div>
                             <div class="rectangle2"></div>
                             <div class="rectangle3"></div>
                         </div>
                     </div>
                     <span>Life Span: 2 - 4 Years</span>
+                    <a href="#">See More</a>
+                </div>
+            </div>
+            <div class="pet" id="cockatiel">
+                <img src="resources/images/animals/cockatiel.jpg">
+                <h3>Cockatiel</h3>
+                <hr>
+                <div class="info-container">
+                    <div class="maintenance-container">
+                        <span>Maintenance: </span>
+                        <div class="rectangle-container yellow">
+                            <div class="rectangle1"></div>
+                            <div class="rectangle2"></div>
+                            <div class="rectangle3"></div>
+                        </div>
+                    </div>
+                    <div class="social-level-container">
+                        <span>Social Level: </span>
+                        <div class="rectangle-container yellow">
+                            <div class="rectangle1"></div>
+                            <div class="rectangle2"></div>
+                            <div class="rectangle3"></div>
+                        </div>
+                    </div>
+                    <span>Life Span: 12 - 15 Years</span>
+                    <a href="#">See More</a>
+                </div>
+            </div>
+            <div class="pet" id="hamster">
+                <img src="resources/images/animals/hamster.jpg">
+                <h3>Hamster</h3>
+                <hr>
+                <div class="info-container">
+                    <div class="maintenance-container">
+                        <span>Maintenance: </span>
+                        <div class="rectangle-container red">
+                            <div class="rectangle1"></div>
+                            <div class="rectangle2"></div>
+                            <div class="rectangle3"></div>
+                        </div>
+                    </div>
+                    <div class="social-level-container">
+                        <span>Social Level: </span>
+                        <div class="rectangle-container yellow">
+                            <div class="rectangle1"></div>
+                            <div class="rectangle2"></div>
+                            <div class="rectangle3"></div>
+                        </div>
+                    </div>
+                    <span>Life Span: 2 - 3 Years</span>
+                    <a href="#">See More</a>
+                </div>
+            </div>
+            <div class="pet" id="chameleon">
+                <img src="resources/images/animals/chameleon.jpg">
+                <h3>Chameleon</h3>
+                <hr>
+                <div class="info-container">
+                    <div class="maintenance-container">
+                        <span>Maintenance: </span>
+                        <div class="rectangle-container green">
+                            <div class="rectangle1"></div>
+                            <div class="rectangle2"></div>
+                            <div class="rectangle3"></div>
+                        </div>
+                    </div>
+                    <div class="social-level-container">
+                        <span>Social Level: </span>
+                        <div class="rectangle-container red">
+                            <div class="rectangle1"></div>
+                            <div class="rectangle2"></div>
+                            <div class="rectangle3"></div>
+                        </div>
+                    </div>
+                    <span>Life Span: 4 - 8 Years</span>
+                    <a href="#">See More</a>
+                </div>
+            </div>
+            <div class="pet" id="chihuahua">
+                <img src="resources/images/animals/chihuahua.jpg">
+                <h3>Chihuahua</h3>
+                <hr>
+                <div class="info-container">
+                    <div class="maintenance-container">
+                        <span>Maintenance: </span>
+                        <div class="rectangle-container red">
+                            <div class="rectangle1"></div>
+                            <div class="rectangle2"></div>
+                            <div class="rectangle3"></div>
+                        </div>
+                    </div>
+                    <div class="social-level-container">
+                        <span>Social Level: </span>
+                        <div class="rectangle-container yellow">
+                            <div class="rectangle1"></div>
+                            <div class="rectangle2"></div>
+                            <div class="rectangle3"></div>
+                        </div>
+                    </div>
+                    <span>Life Span: 12 - 14 Years</span>
                     <a href="#">See More</a>
                 </div>
             </div>

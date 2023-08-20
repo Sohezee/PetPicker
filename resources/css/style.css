@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter&family=Roboto&family=Signika+Negative&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+@media only screen and (max-width: 640px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Header*/
+header {
+    margin-bottom: 51px;
+}
+
+/*Input Section*/
+
+.input-section {
+    display: inline-block;
+    width: 375px;
+    min-width: 375px;
+    height: 666px;
+    margin-left: 31px;
+    border: 1px solid #c9c9c9;
+    border-radius: 17px;
+    background: #FFF;
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.25);
+}
+
+.input-section h1 {
+    color: #000;
+    font-family: "Hammersmith One";
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.input-section hr {
+    width: 95%;
+}
+
+.slider-section {
+    padding: 7px 0;
+    user-select: none;
+}
+
+.slider-section span {
+    color: #9A9696;
+    font-family: Roboto;
+    font-size: 10px;
+}
+
+.input-section h2 {
+    display: inline;
+    margin-left: 6px;
+    width: 135px;
+    height: 26px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+}
+
+.input-section input[type=range] {
+    width: 160px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slider-value {
+    padding: 0px 3px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 10px;
+    font-family: "Inter";
+    font-size: 14px;
+    float: right;
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+.input-section img {
+    float: right;
+    display: inline;
+    position: relative;
+    top: 9px;
+    margin-right: 6px;
+}
+
+.categories {
+    margin-top: 30px;
+}
+
+.input-section .option-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: flex-start;
+    margin-left: 20px;
+}
+
+.option {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.option h3 {
+    font-size: 24px;
+    font-family: "Roboto";
+    font-weight: 400;
+    margin: 10px 3px;
+}
+
+.option input[type=checkbox] {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 640px) {
+    .input-section {
+        height: 575px;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .input-section img {
+        display: none;
+    }
+}
+
+
+/*Pet Section*/
+
+.pet-section {
+
+    display: grid;
+    margin-left: 3%;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: space-between;
+    row-gap: 15px;
+    width: 90%;
+
+}
+
+@media only screen and (max-width: 955px) and (min-width: 641px) {
+    .pet-section {
+        grid-template-columns: 250px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .pet-section {
+        grid-template-columns: 250px 250px;
+        column-gap: 30px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    .pet-section {
+        grid-template-columns: 250px;
+        justify-content: center;
+    }
+}
+
+.pet-section .pet {
+    width: 250px;
+    height: 335px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 15px;
+}
+
+.pet-section .pet hr {
+    width: 95%;
+    border: 1px dashed #988E8E;
+    align-self: center;
+}
+
+.pet-section .pet img {
+    width: 214px;
+    height: 156px;
+    border-radius: 8px;
+    align-self: center;
+}
+
+.pet-section .pet h3 {
+    width: 210px;
+    height: 31px;
+    color: #000;
+    text-align: center;
+    font-family: "Hammersmith One";
+    font-size: 24px;
+    margin-top: 7px;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+.info-container {
+    padding-left: 10px;
+}
+
+.pet-section .pet .info-container span {
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+}
+
+.pet-section .pet .info-container a {
+    font-family: Inter;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    position: relative;
+    top: 3px;
+    color: cornflowerblue;
+}
+
+.pet-section .pet .info-container a:active {
+    color: blue;
+}
+
+.maintenance-container div div,
+.social-level-container div div {
+    width: 28px;
+    height: 16px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0 2px;
+}
+
+.rectangle-container {
+    display: flex;
+}
+
+.red .rectangle1 {
+    background: #d14949;
+}
+
+.red .rectangle2,
+.red .rectangle3 {
+    background: #D9D9D9;
+    box-shadow: none;
+}
+
+.yellow .rectangle1,
+.yellow .rectangle2 {
+    background: #F5E050;
+}
+
+.yellow .rectangle3 {
+    background: #D9D9D9;
+    box-shadow: none;
+}
+
+.green div {
+    background: #4AC91D;
+}
+
+.maintenance-container,
+.social-level-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+
+}
+
+/*Footer*/
+footer {
+    margin-top: 20px;
+}

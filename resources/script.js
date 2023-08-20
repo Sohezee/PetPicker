@@ -40,45 +40,42 @@ class Pet {
     categoryShown() {
         switch (this._type) {
             case 'dog':
-                if (checkboxes[1].checked) return true;
-                else return false;
+                return checkboxes[1].checked;
                 break;
             case 'cat':
-                if (checkboxes[2].checked) return true;
-                else return false;
+                return checkboxes[2].checked;
                 break;
             case 'bird':
-                if (checkboxes[3].checked) return true;
-                else return false;
+                return checkboxes[3].checked;
                 break;
             case 'fish':
-                if (checkboxes[4].checked) return true;
-                else return false;
+                return checkboxes[4].checked;
                 break;
             case 'amphibian':
-                if (checkboxes[5].checked) return true;
-                else return false;
+                return checkboxes[5].checked;
+                break;
                 break;
             case 'rabbit':
-                if (checkboxes[6].checked) return true;
-                else return false;
+                return checkboxes[6].checked;
                 break;
             case 'rodent':
-                if (checkboxes[7].checked) return true;
-                else return false;
+                return checkboxes[7].checked;
                 break;
             case 'reptile':
-                if (checkboxes[8].checked) return true;
-                else return false;
+                return checkboxes[8].checked;
                 break;
         }
     }
 }
 
-let pets = [new Pet('labradorRetriever', 'dog', 3, 3, 12, 0, true),
-new Pet('goldfish', 'fish', 2, 1, 12.5, 0, true),
-new Pet('siameseCat', 'cat', 2, 3, 17.5, 0, false),
-new Pet('bettaFish', 'fish', 1, 3, 3, 0, false)];
+let pets = [new Pet('labradorRetriever', 'dog', 3, 3, 12, 150, true),
+new Pet('goldfish', 'fish', 2, 1, 10, 20, true),
+new Pet('siameseCat', 'cat', 2, 3, 17.5, 50, false),
+new Pet('bettaFish', 'fish', 1, 2, 3, 10, false),
+new Pet('cockatiel', 'bird', 2, 2, 13.5, 30, true),
+new Pet('hamster', 'rodent', 1, 2, 3, 15, true),
+new Pet('chameleon', 'reptile', 3, 1, 6, 42, false),
+new Pet('chihuahua', 'dog', 1, 2, 13, 90, true)];
 
 let sliders = [document.getElementById('maintenance-slider'), document.getElementById('social-level-slider'), document.getElementById('life-span-slider'), document.getElementById('price-slider')];
 
@@ -115,8 +112,19 @@ function inputChange(event) {
     })
 }
 
+function makeMobileFriendly() {
+    let regexp = /android|iphone|kindle|ipad|iPod/i;
+    var isMobile = regexp.test(navigator.userAgent);
+    if (isMobile) {
+        document.getElementById("nav").style.display = "none";
+        let tooltips = document.getElementsByClassName("tooltip");
+        tooltips.forEach(tooltip => tooltip.style.display = "none");
+    }
+}
+
 
 
 sliders.forEach(slider => slider.addEventListener('input', inputChange));
 checkboxes.forEach(checkbox => checkbox.addEventListener('input', inputChange));
 document.addEventListener('DOMContentLoaded', inputChange);
+document.addEventListener('DOMContentLoaded', makeMobileFriendly);
