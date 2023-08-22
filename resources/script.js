@@ -75,7 +75,10 @@ new Pet('bettaFish', 'fish', 1, 2, 3, 10, false),
 new Pet('cockatiel', 'bird', 2, 2, 13.5, 30, true),
 new Pet('hamster', 'rodent', 1, 2, 3, 15, true),
 new Pet('chameleon', 'reptile', 3, 1, 6, 42, false),
-new Pet('chihuahua', 'dog', 1, 2, 13, 90, true)];
+new Pet('chihuahua', 'dog', 1, 2, 13, 90, true),
+new Pet('miniatureLop', 'rabbit', 2, 3, 10, 55, true),
+new Pet('easternNewt', 'amphibian', 2, 1, 14, 30, false)
+];
 
 let sliders = [document.getElementById('maintenance-slider'), document.getElementById('social-level-slider'), document.getElementById('life-span-slider'), document.getElementById('price-slider')];
 

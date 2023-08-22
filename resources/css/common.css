@@ -78,6 +78,7 @@ nav a:hover {
     background-color: #5c92c4;
 }
 
+/*
 @media only screen and (max-width: 510px) {
     header nav {
         display: none;
@@ -87,6 +88,7 @@ nav a:hover {
         padding: 35px;
     }
 }
+*/
 
 header {
     width: 100%;

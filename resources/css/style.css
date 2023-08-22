@@ -133,15 +133,17 @@ header {
 @media only screen and (max-width: 640px) {
     .input-section {
         height: 575px;
-        margin-bottom: 15px;
+        margin: 0px auto 15px auto;
     }
 }
 
+/*
 @media only screen and (max-width: 510px) {
     .input-section img {
         display: none;
     }
 }
+*/
 
 
 /*Pet Section*/
