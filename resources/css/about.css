@@ -90,5 +90,7 @@
     .main-content {
         flex-grow: 2;
     }
+    .credits, .contact, .faq-item, .main-content p {
+        width: 100%
+    }
 }
-

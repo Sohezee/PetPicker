@@ -68,16 +68,28 @@ class Pet {
     }
 }
 
-let pets = [new Pet('labradorRetriever', 'dog', 3, 3, 12, 150, true),
+let pets = [new Pet('labradorRetriever', 'dog', 3, 3, 12, 155, true),
 new Pet('goldfish', 'fish', 2, 1, 10, 20, true),
-new Pet('siameseCat', 'cat', 2, 3, 17.5, 50, false),
-new Pet('bettaFish', 'fish', 1, 2, 3, 10, false),
-new Pet('cockatiel', 'bird', 2, 2, 13.5, 30, true),
+new Pet('siameseCat', 'cat', 2, 3, 17.5, 55, false),
+new Pet('bettaFish', 'fish', 1, 2, 3, 12, false),
+new Pet('cockatiel', 'bird', 2, 2, 13.5, 40, true),
 new Pet('hamster', 'rodent', 1, 2, 3, 15, true),
 new Pet('chameleon', 'reptile', 3, 1, 6, 42, false),
 new Pet('chihuahua', 'dog', 1, 2, 13, 90, true),
 new Pet('miniatureLop', 'rabbit', 2, 3, 10, 55, true),
-new Pet('easternNewt', 'amphibian', 2, 1, 14, 30, false)
+new Pet('easternNewt', 'amphibian', 2, 1, 14, 30, false),
+new Pet('guineaPig', 'rodent', 2, 3, 6, 40, true),
+new Pet('persianCat', 'cat', 3, 2, 14, 320, false),
+new Pet('russianTortoise', 'reptile', 1, 1, 47, 70, true),
+new Pet('greyParrot', 'bird', 3, 3, 54, 470, true),
+new Pet('pacmanFrog', 'amphibian', 2, 1, 12, 25, false),
+new Pet('siberianHusky', 'dog', 3, 3, 14, 200, false),
+new Pet('beardedDragon', 'reptile', 2, 1, 9, 80, false),
+new Pet('beagle', 'dog', 2, 3, 14, 123, true),
+new Pet('jerseyWooly', 'rabbit', 1, 2, 9, 50, true),
+new Pet('pomeranian', 'dog', 2, 2, 14, 120, true),
+new Pet('fancyRat', 'rodent', 1, 3, 3, 22, true),
+new Pet('budgerigar', 'rodent', 1, 3, 8, 32, true)
 ];
 
 let sliders = [document.getElementById('maintenance-slider'), document.getElementById('social-level-slider'), document.getElementById('life-span-slider'), document.getElementById('price-slider')];
@@ -97,10 +109,10 @@ function inputChange(event) {
                 document.getElementById('social-level-value').innerText = parseFloat(sliders[1].value);
                 break;
             case sliders[2]:
-                document.getElementById('life-span-value').innerText = parseFloat(sliders[2].value);
+                document.getElementById('life-span-value').innerText = "≥ " + parseFloat(sliders[2].value);
                 break;
             case sliders[3]:
-                document.getElementById('price-value').innerText = '$' + parseFloat(sliders[3].value);
+                document.getElementById('price-value').innerText = '≤ $' + parseFloat(sliders[3].value);
                 break;
         }
     }
@@ -115,19 +127,7 @@ function inputChange(event) {
     })
 }
 
-function makeMobileFriendly() {
-    let regexp = /android|iphone|kindle|ipad|iPod/i;
-    var isMobile = regexp.test(navigator.userAgent);
-    if (isMobile) {
-        document.getElementById("nav").style.display = "none";
-        let tooltips = document.getElementsByClassName("tooltip");
-        tooltips.forEach(tooltip => tooltip.style.display = "none");
-    }
-}
-
-
 
 sliders.forEach(slider => slider.addEventListener('input', inputChange));
 checkboxes.forEach(checkbox => checkbox.addEventListener('input', inputChange));
 document.addEventListener('DOMContentLoaded', inputChange);
-document.addEventListener('DOMContentLoaded', makeMobileFriendly);

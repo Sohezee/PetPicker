@@ -16,6 +16,7 @@ main {
     display: flex;
     flex: 1;
 }
+
 /* Header*/
 
 header nav {
@@ -40,6 +41,10 @@ header nav a,
     border: none;
 }
 
+header nav .dropdown-content hr {
+    margin: 0px;
+}
+
 .dropbtn {
     margin: 0;
 }
@@ -60,9 +65,10 @@ header nav a,
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 5px 8px;
     text-decoration: none;
     display: block;
+    margin:4px 4px;
 }
 
 .dropdown-content a:hover {
@@ -78,17 +84,15 @@ nav a:hover {
     background-color: #5c92c4;
 }
 
-/*
 @media only screen and (max-width: 510px) {
     header nav {
         display: none;
     }
 
     header {
-        padding: 35px;
+        padding: 25px;
     }
 }
-*/
 
 header {
     width: 100%;
@@ -131,11 +135,12 @@ header h1 {
     margin: 0;
 }
 
-header span {
+header .title-container span {
     color: #FFF;
     text-align: center;
     font-family: Signika Negative;
     font-size: 24px;
+    min-width: 240px;
 }
 
 @media only screen and (max-width: 510px) {
@@ -145,6 +150,12 @@ header span {
 
     .header-container {
         position: static;
+    }
+}
+
+@media only screen and (max-width: 485px) and (min-width: 420px) {
+    header .title-container span {
+        width: 370px;
     }
 }
 
