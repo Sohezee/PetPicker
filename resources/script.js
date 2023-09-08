@@ -83,13 +83,17 @@ new Pet('persianCat', 'cat', 3, 2, 14, 320, false),
 new Pet('russianTortoise', 'reptile', 1, 1, 47, 70, true),
 new Pet('greyParrot', 'bird', 3, 3, 54, 470, true),
 new Pet('pacmanFrog', 'amphibian', 2, 1, 12, 25, false),
-new Pet('siberianHusky', 'dog', 3, 3, 14, 200, false),
+new Pet('siberianHusky', 'dog', 3, 3, 14, 200, true),
 new Pet('beardedDragon', 'reptile', 2, 1, 9, 80, false),
 new Pet('beagle', 'dog', 2, 3, 14, 123, true),
 new Pet('jerseyWooly', 'rabbit', 1, 2, 9, 50, true),
 new Pet('pomeranian', 'dog', 2, 2, 14, 120, true),
 new Pet('fancyRat', 'rodent', 1, 3, 3, 22, true),
-new Pet('budgerigar', 'rodent', 1, 3, 8, 32, true)
+new Pet('budgerigar', 'bird', 1, 3, 8, 32, true),
+new Pet('italianGreyhound', 'dog', 1, 3, 14, 120, true),
+new Pet('scottishFold', 'cat', 1, 3, 13, 130, false),
+new Pet('cornSnake', 'reptile', 1, 1, 12, 40, false),
+new Pet('dwarfFrog', 'reptile', 1, 1, 6, 28, false)
 ];
 
 let sliders = [document.getElementById('maintenance-slider'), document.getElementById('social-level-slider'), document.getElementById('life-span-slider'), document.getElementById('price-slider')];

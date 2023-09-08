@@ -43,6 +43,7 @@ header nav a,
 
 header nav .dropdown-content hr {
     margin: 0px;
+    border: 1px dashed #988E8E;
 }
 
 .dropbtn {
